@@ -1,0 +1,438 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+/*                                  Navbar Section Started */
+nav{
+    display: flex;
+    flex-direction: row;
+    padding: 1% 1.5%;
+}
+
+.bar_sec{
+    position: relative;
+    margin-left:  1% auto;
+}
+.bar_sec img{
+height: 3vh;
+}
+.logoSec img{
+    width: 35%;
+}
+.logoSec{
+    margin-left :1%;
+
+}
+
+.search_input{
+    display: flex;
+    flex-direction: row;
+    gap: 0%;
+    margin-left: 10%;
+} 
+.search_input input{
+    width: 30vw;
+    height:5vh;
+    padding: 2%;
+    font-weight: light;
+    border-radius: 50px;
+    box-shadow: 5px 5px 5px 5px solid gainsboro;
+}
+.search_input img{
+    height: 60%;
+    padding:1%;
+    border: 1px solid gainsboro;
+    border-radius: 50px;
+    display: none;
+}
+.side_sec{
+    margin-left: 23%;
+    display: flex;
+    gap: 15%;
+    flex-direction: row;
+    padding: 0% 2%;
+}
+.mic_icon{
+padding: 0% 1%;
+}
+.mic_icon img{
+    border:  2px solid gainsboro;
+    border-radius: 50px;
+    height: 4vh;
+    background: rgba(220, 220, 220, 0.616);
+}
+.bell_icon img{
+    height: 3vh;
+}
+.plus_icon img{
+    height: 3vh;
+}
+.avatar_sec img{
+    height: 4vh;
+}
+
+/*                                                 Responsive Design For Navbar */
+@media(min-width:1280px){
+    .search_input input{
+        width: 27vw;
+        height:4.3vh;
+        padding: 2%;
+        font-weight: light;
+        border-radius: 50px;
+        box-shadow: 5px 5px 5px 5px solid gainsboro;
+    }
+    .search_input{
+        margin-left: 5%;
+    } 
+    .logoSec img{
+        width: 10vw;
+    }
+    .bar_sec img{
+        height: 2vh;
+        }
+}
+@media(max-width:1280px){
+    .search_input input{
+        width: 27vw;
+        height:4.7vh;
+        padding: 2%;
+        font-weight: light;
+        border-radius: 50px;
+        box-shadow: 5px 5px 5px 5px solid gainsboro;
+    }
+    .search_input{
+        margin-left: 14%;
+    } 
+    .logoSec img{
+        width: 10vw;
+    }
+    .bar_sec img{
+        height: 2vh;
+        }
+}
+@media(max-width:926px){
+    .search_input input{
+        width: 27vw;
+        height:3.6vh;
+        padding: 2%;
+        font-weight: light;
+        border-radius: 50px;
+        box-shadow: 5px 5px 5px 5px solid gainsboro;
+    }
+    .search_input{
+        margin-left: 5%;
+    } 
+    .logoSec img{
+        width: 10vw;
+    }
+    .bar_sec img{
+        height: 2vh;
+        }
+}
+@media(max-width:826px){
+    .search_input input{
+        width: 27vw;
+        height:3.5vh;
+        padding: 2%;
+        font-weight: light;
+        border-radius: 50px;
+        box-shadow: 5px 5px 5px 5px solid gainsboro;
+    }
+    .search_input{
+        margin-left: 5%;
+    } 
+    .logoSec img{
+        width: 10vw;
+    }
+    .bar_sec img{
+        height: 2vh;
+        }
+}
+@media(max-width:786px){
+    .search_input input{
+        width: 27vw;
+        height:3.5vh;
+        padding: 2%;
+        font-weight: light;
+        border-radius: 50px;
+        box-shadow: 5px 5px 5px 5px solid gainsboro;
+    }
+    .search_input{
+        margin-left: 5%;
+    } 
+    .logoSec img{
+        width: 10vw;
+    }
+    .bar_sec img{
+        height: 2vh;
+        }
+}
+@media(max-width:786px){
+    .search_input input{
+        width: 27vw;
+        height:3.5vh;
+        padding: 2%;
+        font-weight: light;
+        border-radius: 50px;
+        box-shadow: 5px 5px 5px 5px solid gainsboro;
+    }
+    .search_input{
+        margin-left: 5%;
+    } 
+    .logoSec img{
+        width: 10vw;
+    }
+    .bar_sec img{
+        height: 2vh;
+        }
+}
+@media(max-width:722px){
+    .side_sec{
+        margin-left: 1%;
+    }
+}
+@media(max-width:698px){
+    .search_input input{
+        width: 27vw;
+        height:3.5vh;
+        padding: 2%;
+        font-weight: light;
+        border-radius: 50px;
+        box-shadow: 5px 5px 5px 5px solid gainsboro;
+    }
+    .search_input{
+        margin-left: 10%;
+    } 
+    .logoSec img{
+        width: 20vw;
+        height: 2vh;
+    }
+    .bar_sec img{
+        display: none;
+        }
+}
+@media(max-width:1280px){
+    .mic_icon{
+        padding: 0% 1%;
+        }
+        .mic_icon img{
+            border:  2px solid gainsboro;
+            border-radius: 50px;
+            height: 3.5vh;
+            background: rgba(220, 220, 220, 0.616);
+        }
+}
+@media(max-width:622px){
+    .mic_icon{
+        padding: 0% 1%;
+        }
+        .mic_icon img{
+            border:  2px solid gainsboro;
+            border-radius: 50px;
+            height: 3vh;
+            background: rgba(220, 220, 220, 0.616);
+        }
+}
+
+/*                                               Responsive Designing For Navbar Section Ended */
+
+
+/*                                          1rst Navbar Ended */
+
+
+
+/*                                  2nd  Navbar Started*/ 
+.secondNavbar{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height:100vh;
+    padding-top: 1%;
+    width: 5%;
+}
+.secondNavbar img{
+    height: 3vh;
+}
+.img_card1{
+width: 5vw;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.img_card1 p{
+    font-size: 8px;
+    text-align: center;
+}
+.img_card2{
+    width: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+    .img_card2 p{
+        font-size: 8px;
+        text-align: center;
+    }
+    .img_card2 i{
+        text-align: center;
+    }
+
+    .img_card3{
+        width: 5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        }
+        .img_card3 p{
+            font-size: 8px;
+            text-align: center;
+        }
+
+        .img_card4{
+            width: 5vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            }
+            .img_card4 p{
+                font-size: 8px;
+                text-align: center;
+            }
+
+            .img_card5{
+                width: 5vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                }
+                .img_card5 p{
+                    font-size: 8px;
+                    text-align: center;
+                }
+                .img_card5 i{
+                    text-align: center;
+                }
+
+
+
+/*                                  2nd  Navbar Ended*/ 
+    
+
+
+
+/*                                                 3rd Navbar Section Started */
+
+
+
+
+
+
+
+/*                                                 3rd Navbar Section Ended */
+
+
+
+
+/*                                               Cards Section Started */
+/* .for_mapping{
+    width: 25%;
+    border: 1px solid black;
+} */
+/* .forCard{
+    width: 10%;
+} */
+#card-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1%;
+    margin-top: 2%;
+    justify-content: center;
+}
+#card-section h6,p{
+    margin-left: 2%;
+}
+.threeNAvbar{
+margin-left: 10%;
+}
+.Cards{
+     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+/* #card-section img{
+    width: 100%;
+} */
+.image_sec img{
+    width: 100%;
+    border-radius: 10px;
+}
+/* .Cards{
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    flex-wrap: wrap;
+} */
+.iMg{
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+    margin-top: 1%;
+}
+.iMg img{
+    width: 3vw;
+    height: 4vh;
+}
+#STy{
+    margin-left: 12%;
+    font-size: 10px;
+    font-weight: lighter;
+    margin-bottom: -3px;
+    margin-top: 1%;
+}
+#STr{
+    margin-left: 12%;
+    font-size: 10px;
+    font-weight: lighter;
+    margin-top: -2px;
+}
+/* .Cards{
+    display: flex;
+    flex-direction: row;
+} */
+/* .forCArds{
+    display: flex;flex-direction: row;
+    flex-wrap: wrap;
+} */
+.DIV{
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+}
+.for-Row{
+    width: 24%;
+}
+.threeNAvbar button{
+font-size: 13px;
+border-radius: 30px;
+padding: 0% 1%;
+font-weight: lighter;
+
+}
+.threeNAvbar button:hover{
+background: gainsboro;
+}
+
+/* Responsive */
+@media(max-width:1134px){
+    .iMg img{
+        width: 3vw;
+        height:3vh;
+    }
+}
+@media(max-width:954px){
+    .iMg img{
+        width: 2vw;
+        height:2vh;
+    }
+}
