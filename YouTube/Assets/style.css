@@ -341,48 +341,174 @@ justify-content: center;
     width: 10%;
 } */
 #card-section{
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1%;
-    margin-top: 2%;
-    justify-content: center;
+    flex-wrap: wrap; */
+    /* gap: 0.5%;
+    margin-left: 6%;
+    margin-top: 2%; */
 }
-#card-section h6,p{
+/* #card-section h6,p{
     margin-left: 2%;
 }
+#card-section h6{
+    font-size: 10px;
+    font-weight: 400;
+}
+#card-section .imG{
+    height: 4vh;
+} */
+
 .threeNAvbar{
 margin-left: 10%;
 }
-.Cards{
+/* .Cards{
      display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     
-}
+} */
 /* #card-section img{
     width: 100%;
 } */
-.image_sec img{
+/* .for-Row img{
     width: 100%;
     border-radius: 10px;
-}
+} */
 /* .Cards{
     display: flex;
     flex-direction: row;
     gap: 2%;
     flex-wrap: wrap;
 } */
-.iMg{
+/* .iMg{
     display: flex;
     flex-direction: row;
-    gap: 1%;
     margin-top: 1%;
+    gap: 2%;
+} */
+/* .card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+} */
+/* .iMg h6{
+    font-size: 6px;
+    font-weight: lighter;
+} */
+/* .iMg img{
+    margin-top: 2px;
+    height: 20%;
+    margin: 2%;
+} */
+/*                                              Cards Responsive Design */
+/* @media(max-width:742px){
+    #card-section h6{
+        font-size: 10px;
+        font-weight: 350;
+    }   
+    #card-section h6,p{
+        margin-left: 1%;
+    }
 }
-.iMg img{
-    width: 3vw;
-    height: 4vh;
+@media(max-width:574px){
+    #card-section h6{
+        font-size: 7px;
+        font-weight: 200;
+    }   
+    #card-section h6,p{
+        margin-left: 1%;
+    }
+    #STy{
+        margin-left: 8%;
+        font-size: 6px;
+        font-weight: lighter;
+        margin-bottom: -3px;
+        margin-top: 0.5%;
+    }
+    #STr{
+        
+        display: none;
+    }
+
 }
+@media(max-width:526px){
+    .threeNAvbar{
+        margin-left: 3%;
+        }
+        .threeNAvbar button{
+            font-size:5px
+            }
+            .iMg img{
+                width: 1vw;
+                height:1vh;
+            }
+            .side_sec img{
+                height: 3vh;
+                            }
+}
+@media(max-width:506px){
+    .threeNAvbar{
+        margin-left: 0%;
+        }
+        .threeNAvbar button{
+            font-size:5px;
+            padding: none;
+            }
+            .side_sec{
+                display: none;
+            }
+}
+@media(max-width:494px){
+    .threeNAvbar{
+        margin-left: 0%;
+        }
+        .threeNAvbar button{
+            font-size:5px;
+            padding: none;
+            }
+            #Gaming{
+                display: none;
+            }
+            .side_sec{
+                display: none;
+            }
+}
+@media(max-width:414px){
+    .threeNAvbar{
+        margin-left: 0%;
+        }
+        .threeNAvbar button{
+            font-size:5px;
+            padding: none;
+            }
+            #Gaming{
+                display: none;
+            }
+            .side_sec{
+                display: none;
+            }
+            #News{
+                display: none;
+            }
+            .secondNavbar{
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                height:100vh;
+                padding-top: 3%;
+                width: 3%;
+                margin-top: 2%;
+            }
+            .secondNavbar img{
+                height:2vh;
+            }
+} */
+/* //////////////////////////////// */
+/* .iMg img{
+    width: 4vw;
+    height: 5vh;
+} */
 #STy{
     margin-left: 12%;
     font-size: 10px;
@@ -423,8 +549,8 @@ font-weight: lighter;
 background: gainsboro;
 }
 
-/* Responsive */
-@media(max-width:1134px){
+/*                                Responsive */
+/* @media(max-width:1134px){
     .iMg img{
         width: 3vw;
         height:3vh;
@@ -435,4 +561,155 @@ background: gainsboro;
         width: 2vw;
         height:2vh;
     }
+} */
+
+
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* Optional: adds space between cards */
+    justify-content: center; /* Centers the cards horizontally */
+    padding: 16px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(100% / 4 - 16px); /* Adjust the width to fit four cards per row */
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image_sec {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.image_sec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.iMg {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.card-price {
+    font-size: 1rem;
+    color: #888;
+}
+
+.card-channel,
+.card-views {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 4px 0;
+}
+
+
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .card {
+        width: calc(100% / 3 - 16px); /* Adjust to three cards per row */
+    }
+}
+
+@media (max-width: 900px) {
+    .card {
+        width: calc(150% / 2 - 16px); /* Adjust to two cards per row */
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: calc(100% - 16px); /* Adjust to one card per row */
+    }
+}
+
+
+
+
+.iO{
+    display: flex;
+    flex-direction: row;
+    margin-left: 1%;
+    margin-top: -8%;
+}
+.iO img{
+    height: 4vh;
+    margin-top: 9%;
+}
+.iO h6{
+    margin-top: 4%;
+    font-size: 10px;
+}
+.card p{
+    margin-left: 10%;
+    font-size: 8px;
+}
+#ptwo{
+    margin-top: -15px;
+}
+#pone{
+margin-top: -5px;
+font-weight: 700;
+}
+@media(max-width:900px){
+    .iMg h6{
+        margin-top:11%;
+        font-size: 10px;
+    }   
+}
+@media(max-width:599px){
+    .iMg h6{
+        /* margin-top:14%; */
+        font-size: 10px;
+    }   
+}
+@media(max-width:682px){
+    #Gaming{
+        display: none;
+    }   
+    .threeNAvbar{
+        margin-left: 0%;
+        }
+}
+@media(max-width:682px){
+    #News{
+        display: none;
+    }   
+    .threeNAvbar{
+        margin-left: 0%;
+        }
+}
+@media(max-width:441px){
+    #National{
+        display: none;
+    }   
+    .threeNAvbar{
+        margin-left: 0%;
+        }
 }

@@ -207,7 +207,7 @@ const products = [
         views: '62 views 1 day ago',
         category: "National Geographic",
         channel: "wildlife world",
-            image : src = "./Assets/Images/pr3.jpg",
+            image : src = "./Assets/Images/hayeana.jpg",
             imagetwo : src = "./Assets/Images/avatar.png"
     },
     {
@@ -223,7 +223,7 @@ const products = [
         views: '39K views',
         category: "National Geographic",
         channel: "National Geographic India",
-            image : src = "./Assets/Images/pr4.jpg",
+            image : src = "./Assets/Images/sdsdg.jpg",
             imagetwo : src = "./Assets/Images/avatar.png"
     },
     {
@@ -231,7 +231,7 @@ const products = [
         views: '5.4M views 8 months ago',
         category: "National Geographic",
         channel: "National Geographic India",
-            image : src = "./Assets/Images/mt1.jpg",
+            image : src = "./Assets/Images/fhdgf.jpg",
             imagetwo : src = "./Assets/Images/avatar.png"
     },
     {
@@ -239,7 +239,7 @@ const products = [
         views: '207K views 11 months ago',
         category: "National Geographic",
         channel: "Wildlife Telecast",
-            image : src = "./Assets/Images/sn1.jpg",
+            image : src = "./Assets/Images/dead.jpg",
             imagetwo : src = "./Assets/Images/avatar.png"
     },
     {
@@ -247,7 +247,7 @@ const products = [
         views: '527K views 10 months ago',
         category: "National Geographic",
         channel: "National Geographic India",
-            image : src = "./Assets/Images/d.jpg",
+            image : src = "./Assets/Images/43.jpg",
             imagetwo : src = "./Assets/Images/avatar.png"
     },
     {
@@ -263,7 +263,7 @@ const products = [
         views: '10K views 5 hours ago',
         category: "National Geographic",
         channel: "National Geographic India",
-            image : src = "./Assets/Images/g1.jpg",
+            image : src = "./Assets/Images/efefefee.jpg",
             imagetwo : src = "./Assets/Images/avatar.png"
     },
 
@@ -380,65 +380,132 @@ const products = [
 let card = document.querySelector('#card-section');
 
 products.map(item => {
-    // console.log(item);
-    card.innerHTML += `<div class="for-Row">
-    <div class="image_sec">
-    <img src="${item.image}">
-    </div>
-    <div class="iMg">
-    <img src="${item.imagetwo}">
-    <h6 class="card-title">${item.name}</h6>        
-    </div>
-    <p id="STy">${item.channel}</p>
-    <p id="STr">${item.views}</p>
+    card.innerHTML = ''; // Clear the existing content
 
+    // Assuming `products` is defined somewhere containing your data
+    let itemsHTML = '';
+    itemsHTML += `<div class="card">
+    <div class="image_sec">
+        <img src="${item.image}" alt="Product Image">
     </div>
-</div>
-`
+    <div class="kO">
+    <div class="iO">
+    <img src="${item.imagetwo}" alt="Product Image">
+    <div class="iMg">
+        <h6 class="card-title">${item.name}</h6>
+        </div>
+    </div>
+        <p class="card-price" id="pone">$${item.channel}</p>
+    <p class="card-channel" id="ptwo">${item.views}</p>
+    </div>
+    
+</div>`
+
+// Convert HTML string to DOM elements
+const tempDiv = document.createElement('div');
+tempDiv.innerHTML = itemsHTML;
+
+// Shuffle the child elements
+const shuffledItems = Array.from(tempDiv.children);
+shuffleArray(shuffledItems);
+
+// Clear card and append shuffled items
+card.innerHTML = ''; // Clear the existing content
+shuffledItems.forEach(item => {
+    card.appendChild(item);
+});
+
 })
 
 function filterdItems(btn) {
-    card.innerHTML = ''
+    card.innerHTML = ''; // Clear the existing content
+
+    // Assuming `products` is defined somewhere containing your data
+    let itemsHTML = '';
     console.log(btn.textContent);
     let filterdItems = products.filter(item => item.category === btn.innerHTML).map(item => {
-        card.innerHTML +=  `<div class="for-Row">
+        itemsHTML += `<div class="card">
         <div class="image_sec">
-        <img src="${item.image}">
+            <img src="${item.image}" alt="Product Image">
         </div>
+        <div class="kO">
+        <div class="iO">
+        <img src="${item.imagetwo}" alt="Product Image">
         <div class="iMg">
-        <img src="${item.imagetwo}">
-        <h6 class="card-title">${item.name}</h6>        
+            <h6 class="card-title">${item.name}</h6>
+            </div>
         </div>
-        <p id="STy">${item.channel}</p>
-    <p id="STr">${item.views}</p>
-
+            <p class="card-price" id="pone">$${item.channel}</p>
+        <p class="card-channel" id="ptwo">${item.views}</p>
         </div>
-    </div>
-    `
+        
+    </div>`
+    
         return item
     })
+    // Convert HTML string to DOM elements
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = itemsHTML;
+
+    // Shuffle the child elements
+    const shuffledItems = Array.from(tempDiv.children);
+    shuffleArray(shuffledItems);
+
+    // Clear card and append shuffled items
+    card.innerHTML = ''; // Clear the existing content
+    shuffledItems.forEach(item => {
+        card.appendChild(item);
+    });
     console.log(filterdItems);
 }
 
-function allItems(){
-    card.innerHTML = ''
-    
-    products.map(item => {
-        // console.log(item);
-        card.innerHTML +=  `<div class="for-Row">
-        <div class="image_sec">
-        <img src="${item.image}">
-        </div>
-        <div class="iMg">
-        <img src="${item.imagetwo}">
-        <h6 class="card-title">${item.name}</h6>        
-        </div>
-        <p id="STy">${item.channel}</p>
-        <p id="STr">${item.views}</p>
-       
-        </div>
-
-    </div>
-    `
-    })
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
 }
+
+function allItems() {
+    card.innerHTML = ''; // Clear the existing content
+
+    // Assuming `products` is defined somewhere containing your data
+    let itemsHTML = '';
+
+    products.forEach(item => {
+        itemsHTML += `<div class="card">
+        <div class="image_sec">
+            <img src="${item.image}" alt="Product Image">
+        </div>
+        <div class="kO">
+        <div class="iO">
+        <img src="${item.imagetwo}" alt="Product Image">
+        <div class="iMg">
+            <h6 class="card-title">${item.name}</h6>
+            </div>
+        </div>
+            <p class="card-price" id="pone">$${item.channel}</p>
+        <p class="card-channel" id="ptwo">${item.views}</p>
+        </div>
+        
+    </div>`;
+    });
+
+    // Convert HTML string to DOM elements
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = itemsHTML;
+
+    // Shuffle the child elements
+    const shuffledItems = Array.from(tempDiv.children);
+    shuffleArray(shuffledItems);
+
+    // Clear card and append shuffled items
+    card.innerHTML = ''; // Clear the existing content
+    shuffledItems.forEach(item => {
+        card.appendChild(item);
+    });
+}
+
+// Example usage assuming `products` is defined globally or elsewhere
+allItems();
